@@ -223,13 +223,14 @@
   .week{margin-bottom:26px;}
   .week-label{font-family:var(--display);font-weight:800;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink);background:var(--surface-2);border:1px solid var(--line);display:inline-block;padding:6px 14px;border-radius:999px;margin-bottom:14px;}
   .day-list{display:flex;flex-direction:column;gap:10px;}
-  .day{display:grid;grid-template-columns:58px 1fr;gap:16px;background:var(--bg-2);border:1px solid var(--line);border-radius:var(--radius-md);padding:14px 16px;align-items:start;}
+  .day{display:grid;grid-template-columns:58px 1fr;gap:16px;background:var(--bg-2);border:1px solid var(--line);border-radius:var(--radius-md);padding:14px 16px;align-items:center;}
+  .day.is-rest{background:transparent;border-style:dashed;}
   .day .dn{font-family:var(--display);font-weight:900;font-size:15px;color:var(--ink);text-align:center;background:var(--surface-2);border-radius:10px;padding:8px 4px;line-height:1;}
-  .subj{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
-  @media(max-width:520px){.subj{grid-template-columns:1fr;}}
+  .day.is-rest .dn{color:var(--muted);}
+  .subj{display:grid;grid-template-columns:1fr;gap:10px;}
   .subj .s{display:flex;gap:9px;align-items:flex-start;font-size:13.5px;color:var(--ink-soft);}
   .subj .s .bar{width:4px;border-radius:3px;flex:none;align-self:stretch;min-height:34px;}
-  .bar-v{background:var(--amber);}.bar-q{background:var(--teal);}
+  .bar-v{background:var(--amber);}.bar-q{background:var(--teal);}.bar-r{background:var(--muted);}
   .subj .s .who{font-weight:700;color:var(--ink);font-size:11px;text-transform:uppercase;letter-spacing:.05em;display:block;}
   .subj .s .top-t{font-weight:700;color:var(--ink);}
   .subj .s .top-t.rev{color:var(--muted);font-weight:600;}
@@ -402,9 +403,9 @@
         <h4 class="pt">The Sprint</h4>
         <p class="pd">For students with solid basics who want to peak fast. ~3 focused hours a day.</p>
         <ul>
-          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Azooz Parts 1–15 · Verbal</li>
-          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Tamer Parts 1–12 · Quantitative</li>
-          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> 15 days of revision</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Azooz Parts 1–15 + Tamer Parts 1–12</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> One full part per day, verbal &amp; quant mixed</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> 3 rest days</li>
         </ul>
         <button class="btn btn-primary open-btn" data-plan="30">View full plan</button>
       </article>
@@ -417,9 +418,9 @@
         <h4 class="pt">The Momentum</h4>
         <p class="pd">The balanced path — build, practice, then master. ~2 hours a day.</p>
         <ul>
-          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Azooz Parts 1–15 · Verbal</li>
-          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Tamer Parts 1–12 · Quantitative</li>
-          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> 30 days of revision</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Azooz in ½-parts, Tamer full parts</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Verbal &amp; quant days mixed</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> 3 rest days</li>
         </ul>
         <button class="btn btn-primary open-btn" data-plan="45">View full plan</button>
       </article>
@@ -431,9 +432,9 @@
         <h4 class="pt">The Foundation</h4>
         <p class="pd">Start from scratch and build unshakable fundamentals. ~1.5 hours a day.</p>
         <ul>
-          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Azooz Parts 1–15 · Verbal</li>
-          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Tamer Parts 1–12 · Quantitative</li>
-          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> 45 days of revision</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Every part in gentle ½-part days</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Verbal &amp; quant days mixed</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> 6 rest days</li>
         </ul>
         <button class="btn btn-primary open-btn" data-plan="60">View full plan</button>
       </article>
@@ -451,7 +452,7 @@
     <div class="steps">
       <div class="step"><div class="n">01</div><h4>Count your days</h4><p>Check how long until your GAT date, then pick the 30, 45 or 60-day plan that fits.</p></div>
       <div class="step"><div class="n">02</div><h4>Follow the schedule</h4><p>Every day tells you exactly what to study — verbal with Azooz, quant with Tamer — plus the task.</p></div>
-      <div class="step"><div class="n">03</div><h4>Revise &amp; lock it in</h4><p>Once you finish all the parts, the remaining days are for revision so everything sticks by test day.</p></div>
+      <div class="step"><div class="n">03</div><h4>Mix &amp; rest</h4><p>Verbal and quant days alternate, with rest days built in so you recover and let each part sink in.</p></div>
     </div>
   </div>
 </section>
@@ -522,7 +523,7 @@
       <div class="legend">
         <span class="k"><span class="dot-v"></span> Verbal — Azooz</span>
         <span class="k"><span class="dot-q"></span> Quantitative — Tamer</span>
-        <span class="k"><span class="dot-r"></span> Revision</span>
+        <span class="k"><span class="dot-r"></span> Rest day</span>
       </div>
       <div id="modalDays"></div>
     </div>
@@ -536,20 +537,50 @@ const AZOOZ_PARTS = 15;
 const TAMER_PARTS = 12;
 
 const PLANS = {
-  '30':{color:'amber', name:'The Sprint', kick:'Plan 01 · 30-Day Sprint',
-        desc:'Work through Azooz Parts 1–15 and Tamer Parts 1–12, then use the remaining days for revision.'},
-  '45':{color:'coral', name:'The Momentum', kick:'Plan 02 · 45-Day Momentum',
-        desc:'Work through Azooz Parts 1–15 and Tamer Parts 1–12, then use the remaining days for revision.'},
-  '60':{color:'teal', name:'The Foundation', kick:'Plan 03 · 60-Day Foundation',
-        desc:'Work through Azooz Parts 1–15 and Tamer Parts 1–12, then use the remaining days for revision.'}
+  '30':{color:'amber', name:'The Sprint', kick:'Plan 01 · 30-Day Sprint', azSplit:1, tmSplit:1,
+        desc:'Full Azooz and Tamer parts, one a day — verbal and quant alternating, with rest days built in.'},
+  '45':{color:'coral', name:'The Momentum', kick:'Plan 02 · 45-Day Momentum', azSplit:2, tmSplit:1,
+        desc:'Azooz in half-parts and full Tamer parts — verbal and quant alternating, with rest days built in.'},
+  '60':{color:'teal', name:'The Foundation', kick:'Plan 03 · 60-Day Foundation', azSplit:2, tmSplit:2,
+        desc:'Every part split into gentle half-part days — verbal and quant alternating, with rest days built in.'}
 };
 
-function buildDays(total){
-  const days=[];
-  for(let i=1;i<=total;i++){
-    const verbal = i<=AZOOZ_PARTS ? {label:'Azooz — Part '+i, rev:false} : {label:'Revision', rev:true};
-    const quant  = i<=TAMER_PARTS ? {label:'Tamer — Part '+i, rev:false} : {label:'Revision', rev:true};
-    days.push({n:i, verbal, quant});
+// Build the list of study segments for one coach (whole parts, or split into halves)
+function segmentsFor(who, parts, split){
+  const segs=[];
+  for(let p=1;p<=parts;p++){
+    if(split===1){ segs.push({who, label:`${who} — Part ${p}`}); }
+    else {
+      segs.push({who, label:`${who} — ½ Part ${p} (1st half)`});
+      segs.push({who, label:`${who} — ½ Part ${p} (2nd half)`});
+    }
+  }
+  return segs;
+}
+// Evenly interleave the two coaches so verbal & quant stay mixed throughout
+function mergeMixed(a,b){
+  const out=[]; let i=0,j=0; const na=a.length, nb=b.length;
+  while(i<na || j<nb){
+    if(j>=nb || (i<na && (i+0.5)/na <= (j+0.5)/nb)) out.push(a[i++]);
+    else out.push(b[j++]);
+  }
+  return out;
+}
+function buildDays(plan,total){
+  const study=mergeMixed(
+    segmentsFor('Azooz',AZOOZ_PARTS,plan.azSplit),
+    segmentsFor('Tamer',TAMER_PARTS,plan.tmSplit)
+  );
+  const rest=Math.max(0,total-study.length);
+  const restSet=new Set();
+  if(rest>0){
+    const step=total/(rest+1);
+    for(let r=1;r<=rest;r++){ let pos=Math.round(r*step); while(restSet.has(pos)) pos++; if(pos<=total) restSet.add(pos); }
+  }
+  const days=[]; let si=0;
+  for(let d=1;d<=total;d++){
+    if(restSet.has(d) || si>=study.length){ days.push({n:d,rest:true}); }
+    else { const s=study[si++]; days.push({n:d,rest:false,who:s.who,label:s.label}); }
   }
   return days;
 }
@@ -564,21 +595,26 @@ function stat(v,k){return `<div class="mstat"><div class="v">${v}</div><div clas
 function openPlan(key){
   const plan=PLANS[key]; if(!plan) return;
   const total=parseInt(key,10);
-  const weeks=chunkWeeks(buildDays(total));
+  const days=buildDays(plan,total);
+  const weeks=chunkWeeks(days);
+  const restCount=days.filter(d=>d.rest).length;
   modalHead.className='modal-head mh-'+plan.color;
   document.getElementById('modalKick').textContent=plan.kick;
   document.getElementById('modalTitle').textContent=plan.name+' — '+total+'-Day GAT Plan';
   document.getElementById('modalDesc').textContent=plan.desc;
-  document.getElementById('modalStats').innerHTML=stat(total,'Days')+stat(AZOOZ_PARTS,'Azooz parts')+stat(TAMER_PARTS,'Tamer parts')+stat(Math.max(0,total-AZOOZ_PARTS),'Revision days');
+  document.getElementById('modalStats').innerHTML=stat(total,'Days')+stat(AZOOZ_PARTS,'Azooz parts')+stat(TAMER_PARTS,'Tamer parts')+stat(restCount,'Rest days');
   const wrap=document.getElementById('modalDays');
   wrap.innerHTML=weeks.map((w,wi)=>{
     const dayHtml=w.map(d=>{
-      return `<div class="day"><div class="dn">${d.n}</div><div class="body">
-        <div class="subj">
-          <div class="s"><span class="bar bar-v"></span><span><span class="who">Verbal · Azooz</span><span class="top-t${d.verbal.rev?' rev':''}">${d.verbal.label}</span></span></div>
-          <div class="s"><span class="bar bar-q"></span><span><span class="who">Quant · Tamer</span><span class="top-t${d.quant.rev?' rev':''}">${d.quant.label}</span></span></div>
-        </div>
-      </div></div>`;
+      if(d.rest){
+        return `<div class="day is-rest"><div class="dn">${d.n}</div><div class="body"><div class="subj">
+          <div class="s"><span class="bar bar-r"></span><span><span class="who">Rest day</span><span class="top-t rev">Take a break — no study today</span></span></div>
+        </div></div></div>`;
+      }
+      const v = d.who==='Azooz';
+      return `<div class="day"><div class="dn">${d.n}</div><div class="body"><div class="subj">
+        <div class="s"><span class="bar ${v?'bar-v':'bar-q'}"></span><span><span class="who">${v?'Verbal · Azooz':'Quant · Tamer'}</span><span class="top-t">${d.label}</span></span></div>
+      </div></div></div>`;
     }).join('');
     return `<div class="week"><span class="week-label">Week ${wi+1}</span><div class="day-list">${dayHtml}</div></div>`;
   }).join('');
